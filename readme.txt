@@ -1,7 +1,7 @@
 ch07-ssm : SSM整合开发
 
 SSM整合，整合中有容器。
-1.第一个容器SpringMVC容器，管理COntroller控制器对象的
+1.第一个容器SpringMVC容器，管理Controller控制器对象的
 2.第二个容器Spring容器，管理Service，Dao，工具类对象的
 我们要做的是 把使用的对象交给适合的容器对象创建和管理。
 把Controller还有Web开发的相关对象，交给SpringMVC容器，这些web用的对象写在SpringMVC配置文件中
