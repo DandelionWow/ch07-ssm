@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div id="choice01">
+    <input type="checkbox" name="test1" value="A"/>A
+    <input type="checkbox" name="test1" value="B"/>B
+    <input type="checkbox" name="test1" value="C"/>C
+    <input type="checkbox" name="test1" value="D"/>D
+</div>
+<div id="choice02">
+    <input type="checkbox" name="test2" value="A"/>A
+    <input type="checkbox" name="test2" value="B"/>B
+    <input type="checkbox" name="test2" value="C"/>C
+    <input type="checkbox" name="test2" value="D"/>D
+</div>
+
+<script type="text/javascript">
+    var stuRight = "";
+    $(":checkbox").click(function () {
+        //获取多选题选中的选项
+        var parent = $(this).parents("div[id^='choice']");
+        var id = parent.attr("id");
+        var vals=[];
+        var vals2="";
+        $.each($('#'+id+' input:checkbox:checked'),function(){
+            vals.push($(this).val());
+            vals2 += $(this).val();
+        });
+        console.log(vals.toString());
+        console.log(vals2);
+    })
+</script>
+
+</body>
+</html>

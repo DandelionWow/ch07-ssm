@@ -94,6 +94,18 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+    <repository>
+      <id>nexus_realease</id>
+      <name>xyz</name>
+      <url>http://192.168.3.147:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus_snapshot</id>
+      <url>http://192.168.3.147:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <build>
     <resources>
       <resource>
